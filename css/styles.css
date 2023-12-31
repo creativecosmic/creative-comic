@@ -88,48 +88,67 @@ body {
   font-family: "inter";
   font-size: 1rem;
 }
+.hero .content .line {
+  font-size: 2rem;
+}
+.hero .content .bawah {
+  font-size: 10px;
+}
 .hero .content .he {
   font-family: "inter";
   font-size: 1rem;
   margin-top: -50px;
 }
-.hero .content span {
+.hero .content h1 span {
   font-family: "Tenex", sans-serif;
   font-size: 1rem;
 }
 .hero .content .intim {
-  width: 100%; /* Menggunakan lebar 100% agar gambar menyesuaikan lebar kontennya */
+  width: auto; /* Menggunakan lebar 100% agar gambar menyesuaikan lebar kontennya */
   max-width: 100%;
   margin: -10rem auto;
 }
-#lineup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.menu-card {
-  margin-bottom: 1rem; /* Jarak antara setiap gambar */
-}
-
-.menu-card img {
-  width: 80%; /* Lebar gambar sesuai dengan lebar parent */
-  max-width: 500px; /* Lebar maksimum gambar */
-  height: auto; /* Tinggi gambar menyesuaikan proporsi */
-  margin: -2rem;
-}
-
 .hero .content h3 {
   font-size: 1.5rem;
   font-family: "Lateef";
-  letter-spacing: 1px;
-}
-
-.hero .content p {
-  font-family: "Lateef";
-  font-size: 10px;
   letter-spacing: 2px;
 }
+.hero .content p {
+  font-family: "Lateef";
+  font-size: 9px;
+  letter-spacing: 2.5px;
+}
+.hero .content .guest {
+  font-size: 1.4rem;
+  font-weight: lighter;
+  padding: 20px;
+  font-family: "Lateef";
+  letter-spacing: 1px;
+}
+.hero .content .gallery {
+  display: flex;
+  flex-direction: row; /* Display images in a horizontal row */
+  justify-content: center;
+  align-items: center; /* Center the images vertically */
+  flex-wrap: nowrap;
+  margin: 20px;
+}
+.hero .content .gallery img {
+  width: 200px; /* Adjust the width of the images as needed */
+  height: auto; /* Maintain the aspect ratio */
+  object-fit: cover;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  filter: grayscale(100%); /* Convert the image to black and white by default */
+}
+
+.hero .content .gallery img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%); /* Restore color when hovered */
+}
+
 .hero .content .countdown {
   padding: 0.5rem 7%;
   display: flex;
@@ -138,18 +157,21 @@ body {
   margin-top: 5px;
 }
 .text-countdown {
-  font-size: 1rem;
+  margin-top: 5rem;
+  font-size: 1.2rem;
   font-family: "inter";
+  letter-spacing: 2px;
 }
+
 .countdown div {
   text-align: center;
   padding: 0.4rem;
 }
 .hero .content .countdown p {
   display: inline;
-  font-size: 4rem;
+  font-size: 7rem;
   font-family: "inter", sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   /* animation: countdownBounce 2s infinite; */
   border: 2px solid #333;
   border-radius: 5px;
@@ -161,6 +183,13 @@ body {
   font-size: 11px;
   letter-spacing: 1px;
 }
+/* #demo {
+  margin-top: 10px;
+  font-family: "inter";
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(246, 246, 246);
+} */
 /* ABOUT */
 .about {
   padding: 7.5rem 7% 1.4rem;
@@ -194,7 +223,7 @@ body {
 }
 .about .row .content p {
   margin-bottom: 0.8rem;
-  font-family: "inter", sans-serif;
+  font-family: "Lateef";
   font-size: 1.3rem;
   font-weight: lighter;
   line-height: 1.6;
@@ -239,9 +268,8 @@ body {
   display: inline-block;
   color: #fff;
   padding: 0.3rem 1rem;
-  border: 1px solid #fff;
-  background-color: rgb(70, 63, 63);
-  border-radius: 8px;
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 7px;
   font-size: 0.7rem;
   margin-bottom: 3rem;
 }
@@ -253,6 +281,9 @@ body {
   border-radius: 8px;
   font-size: 1rem;
   margin-bottom: 3rem;
+}
+.ticket .row .content a:hover {
+  background-color: rgb(255, 0, 0);
 }
 /* RUNDOWN */
 .rundown {
@@ -277,9 +308,10 @@ body {
   display: inline;
   padding: 1rem 3rem;
   width: 50%;
-  border-radius: 2.625rem;
+  border-radius: 42px;
+  background: linear-gradient(0deg, #555151 0%, rgba(255, 255, 255, 0) 96.75%);
   border: 3px solid #fff;
-  background: rgba(217, 217, 217, 0.14);
+  /* background: rgba(217, 217, 217, 0.14); */
 }
 /* Maps */
 .maps {
@@ -497,19 +529,37 @@ body {
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
   }
+  .hero .content h1 {
+    font-family: "inter";
+    font-size: 0.6rem;
+  }
+
+  .hero .content h1 span {
+    font-family: "Tenex", sans-serif;
+    font-size: 0.6rem;
+  }
+  .hero .content .line {
+    font-size: 1.5rem;
+  }
   .hero .content .he {
     font-family: "inter";
     font-size: 0.7rem;
     margin-top: 1rem;
   }
+
   .hero .content .intim {
     width: 100%; /* Menggunakan lebar 100% agar gambar menyesuaikan lebar kontennya */
     max-width: 100%;
     margin: auto;
   }
-  .hero .content span {
-    font-family: "Tenex", sans-serif;
-    font-size: 0.9rem;
+  .hero .content .gallery img {
+    width: 45%;
+  }
+  .text-countdown {
+    margin-top: 5rem;
+    font-size: 8px;
+    font-family: "inter";
+    letter-spacing: 0;
   }
   .about .row {
     flex-wrap: wrap;
@@ -525,6 +575,11 @@ body {
   .about .row .content h3 {
     margin-top: 1rem;
     font-size: 1rem;
+  }
+  .ticket .row .content img {
+    width: 27%;
+    display: inline-table;
+    margin: 10px;
   }
   .rundown .row .content img {
     width: 100%;
@@ -563,5 +618,10 @@ body {
   }
   .rules .row .content img {
     width: 100%;
+  }
+  .hero .content .intim {
+    width: 100%; /* Menggunakan lebar 100% agar gambar menyesuaikan lebar kontennya */
+    max-width: 100%;
+    margin: auto;
   }
 }

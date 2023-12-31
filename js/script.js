@@ -36,7 +36,7 @@ document.addEventListener("click", function (e) {
 // Hitung Mundur
 // Hitung Mundur
 // Set the date we're counting down to
-var countDownDate = new Date("March 2, 2024 16:30:00").getTime();
+var countDownDate = new Date("March 2, 2024 16:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function () {
@@ -61,7 +61,11 @@ var x = setInterval(function () {
   // If the count down is over, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("days").innerHTML = "00";
+    document.getElementById("hours").innerHTML = "00";
+    document.getElementById("minutes").innerHTML = "00";
+    document.getElementById("seconds").innerHTML = "00";
+    document.getElementById("demo").innerHTML = "TODAY IS THE DAY"; // Replace the countdown with your desired message
   }
 }, 1000);
 
