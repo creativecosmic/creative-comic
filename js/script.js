@@ -110,3 +110,25 @@ document.addEventListener("DOMContentLoaded", function () {
     zoomedImage.style.display = "none";
   });
 });
+// Get the gallery images
+const galleryImages = document.querySelectorAll(".gallery img");
+
+// Get the overlay and zoomed image elements
+const overlay = document.getElementById("overlay");
+const zoomImg = document.getElementById("zoom-img");
+
+// Add click event listener to each gallery image
+galleryImages.forEach((img) => {
+  img.addEventListener("click", () => {
+    // Show the overlay
+    overlay.style.display = "flex";
+
+    // Set the clicked image source to the zoomed image
+    zoomImg.src = img.src;
+  });
+});
+
+// Add click event listener to close the overlay when clicked
+overlay.addEventListener("click", () => {
+  overlay.style.display = "none";
+});

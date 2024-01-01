@@ -3,7 +3,6 @@
   --bg: #010101;
 }
 * {
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
@@ -13,6 +12,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: "inter", sans-serif;
   background-color: var(--bg);
@@ -134,7 +134,7 @@ body {
   margin: 20px;
 }
 .hero .content .gallery img {
-  width: 200px; /* Adjust the width of the images as needed */
+  width: 250px; /* Adjust the width of the images as needed */
   height: auto; /* Maintain the aspect ratio */
   object-fit: cover;
   margin: 10px;
@@ -148,7 +148,25 @@ body {
   transform: scale(1.1);
   filter: grayscale(0%); /* Restore color when hovered */
 }
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
 
+/* Style for the enlarged image */
+.zoom-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
 .hero .content .countdown {
   padding: 0.5rem 7%;
   display: flex;
@@ -543,14 +561,14 @@ body {
   }
   .hero .content .he {
     font-family: "inter";
-    font-size: 0.6rem;
-    margin-top: 1rem;
+    font-size: 0.5rem;
+    margin-top: -1rem;
   }
 
   .hero .content .intim {
     width: 100%; /* Menggunakan lebar 100% agar gambar menyesuaikan lebar kontennya */
     max-width: 100%;
-    margin: auto;
+    margin: -3rem auto;
   }
   .hero .content .gallery img {
     width: 45%;
@@ -622,6 +640,6 @@ body {
   .hero .content .intim {
     width: 100%; /* Menggunakan lebar 100% agar gambar menyesuaikan lebar kontennya */
     max-width: 100%;
-    margin: auto;
+    margin: -3rem auto;
   }
 }
